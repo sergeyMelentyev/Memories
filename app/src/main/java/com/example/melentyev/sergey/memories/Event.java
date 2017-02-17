@@ -15,12 +15,12 @@ class Event {
         mDate = new Date();
     }
 
-    public UUID getId() { return mId; }
-    public Date getDate() { return mDate; }
-    public void setDate(Date date) { mDate = date; }
-    public boolean isBest() { return mBest; }
-    public void setBest(boolean best) { mBest = best; }
-    public String getTitle() { return mTitle; }
-    public void setTitle(String title) { mTitle = title; }
+    UUID getId() { return mId; }
+    Date getDate() { return mDate; }
+    void setDate(Date date) { mDate = date; }
+    boolean isBest() { return mBest; }
+    void setBest(boolean best) { mBest = best; }
+    String getTitle() { return mTitle; }
+    void setTitle(String title) { mTitle = title; }
 
 }
