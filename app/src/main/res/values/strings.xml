@@ -1,3 +1,10 @@
 <resources>
+
     <string name="app_name">Memories</string>
+
+    <string name="event_title_hint">Enter a title for the memory</string>
+    <string name="event_title_label">Title</string>
+    <string name="event_details_label">Details</string>
+    <string name="event_best_label">My favorite</string>
+
 </resources>
