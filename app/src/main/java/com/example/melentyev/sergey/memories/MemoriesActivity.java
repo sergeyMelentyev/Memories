@@ -10,13 +10,13 @@ public class MemoriesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_memories);
+        setContentView(R.layout.main_activity_fragment_holder);
 
         FragmentManager fm = getSupportFragmentManager();
-        Fragment fragment = fm.findFragmentById(R.id.activity_memories);
+        Fragment fragment = fm.findFragmentById(R.id.main_activity_fragment_holder);
         if (fragment == null) {
-            fragment = new EventFragment();
-            fm.beginTransaction().add(R.id.activity_memories, fragment).commit();
+            fragment = new EventFragmentController();
+            fm.beginTransaction().add(R.id.main_activity_fragment_holder, fragment).commit();
         }
     }
 }

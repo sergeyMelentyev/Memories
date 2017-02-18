@@ -12,7 +12,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
-public class EventFragment extends Fragment {
+public class EventFragmentController extends Fragment {
     private Event mEvent;
     private EditText mTitleField;
     private Button mDateButton;
@@ -26,7 +26,7 @@ public class EventFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_event, container, false);
+        View v = inflater.inflate(R.layout.event_fragment_instance, container, false);
 
         mTitleField = (EditText) v.findViewById(R.id.event_title);
         mTitleField.addTextChangedListener(new TextWatcher() {

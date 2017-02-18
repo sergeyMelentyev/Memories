@@ -6,18 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-class EventLab {
+class EventsList {
 
-    private static EventLab sEventLab;
+    private static EventsList sEventsList;
     private List<Event> mEvents;
 
-    public static EventLab get(Context context) {
-        if (sEventLab == null)
-            sEventLab = new EventLab(context);
-        return sEventLab;
+    public static EventsList get(Context context) {
+        if (sEventsList == null)
+            sEventsList = new EventsList(context);
+        return sEventsList;
     }
 
-    private EventLab(Context context) {
+    private EventsList(Context context) {
         mEvents = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             Event event = new Event();
