@@ -33,6 +33,39 @@ public class CrimeListFragment extends Fragment {
         mCrimeRecyclerView.setAdapter(mAdapter);
     }
 
+
+
+
+
+    public class CrimeAdapter extends RecyclerView.Adapter<CrimeHolder> {
+        private List<Crime> mCrimes;
+
+        public CrimeAdapter(List<Crime> crimes) {
+            mCrimes = crimes;
+        }
+
+        @Override
+        public CrimeHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
+            return new CrimeHolder(layoutInflater, parent);
+        }
+
+        @Override
+        public void onBindViewHolder(CrimeHolder holder, int position) {
+            Crime crime = mCrimes.get(position);
+            holder.bind(crime);
+        }
+
+        @Override
+        public int getItemCount() {
+            return mCrimes.size();
+        }
+    }
+
+
+
+
+
     public class CrimeHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView mTitleTextView;
         private TextView mDateTextView;
@@ -59,31 +92,6 @@ public class CrimeListFragment extends Fragment {
         @Override
         public void onClick(View v) {
             Toast.makeText(getActivity(), mCrime.getTitle() + " clicked!", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    public class CrimeAdapter extends RecyclerView.Adapter<CrimeHolder> {
-        private List<Crime> mCrimes;
-
-        public CrimeAdapter(List<Crime> crimes) {
-            mCrimes = crimes;
-        }
-
-        @Override
-        public CrimeHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
-            return new CrimeHolder(layoutInflater, parent);
-        }
-
-        @Override
-        public void onBindViewHolder(CrimeHolder holder, int position) {
-            Crime crime = mCrimes.get(position);
-            holder.bind(crime);
-        }
-
-        @Override
-        public int getItemCount() {
-            return mCrimes.size();
         }
     }
 }
