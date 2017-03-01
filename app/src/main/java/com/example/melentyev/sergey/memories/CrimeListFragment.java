@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.List;
 
 public class CrimeListFragment extends Fragment {
@@ -41,7 +40,7 @@ public class CrimeListFragment extends Fragment {
         private Crime mCrime;
 
         public CrimeHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.list_item_crime, parent, false));
+            super(inflater.inflate(R.layout.list_item_crime_con, parent, false));
 
             itemView.setOnClickListener(this);
 
