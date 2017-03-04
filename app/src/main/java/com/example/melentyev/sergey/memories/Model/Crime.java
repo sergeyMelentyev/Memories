@@ -1,9 +1,9 @@
-package com.example.melentyev.sergey.memories;
+package com.example.melentyev.sergey.memories.Model;
 
 import java.util.Date;
 import java.util.UUID;
 
-class Crime {
+public class Crime {
 
     private UUID mId;
     private String mTitle;

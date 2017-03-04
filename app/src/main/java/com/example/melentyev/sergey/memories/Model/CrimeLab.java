@@ -1,4 +1,4 @@
-package com.example.melentyev.sergey.memories;
+package com.example.melentyev.sergey.memories.Model;
 
 import android.content.Context;
 

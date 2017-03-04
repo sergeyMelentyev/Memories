@@ -1,4 +1,4 @@
-package com.example.melentyev.sergey.memories;
+package com.example.melentyev.sergey.memories.Controller;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+
+import com.example.melentyev.sergey.memories.Model.Crime;
+import com.example.melentyev.sergey.memories.Model.CrimeLab;
+import com.example.melentyev.sergey.memories.R;
 
 import java.util.UUID;
 

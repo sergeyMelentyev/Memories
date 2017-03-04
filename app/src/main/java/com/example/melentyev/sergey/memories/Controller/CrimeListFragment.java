@@ -1,4 +1,4 @@
-package com.example.melentyev.sergey.memories;
+package com.example.melentyev.sergey.memories.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.melentyev.sergey.memories.Model.Crime;
+import com.example.melentyev.sergey.memories.Model.CrimeLab;
+import com.example.melentyev.sergey.memories.R;
+
 import java.util.List;
 
 public class CrimeListFragment extends Fragment {
@@ -30,8 +34,16 @@ public class CrimeListFragment extends Fragment {
     private void updateUI() {
         CrimeLab crimeLab = CrimeLab.get(getActivity());
         List<Crime> crimes = crimeLab.getCrimes();
-        mAdapter = new CrimeAdapter(crimes);
-        mCrimeRecyclerView.setAdapter(mAdapter);
+        if (mAdapter == null) {
+            mAdapter = new CrimeAdapter(crimes);
+            mCrimeRecyclerView.setAdapter(mAdapter);
+        } else mAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateUI();
     }
 
     public class CrimeAdapter extends RecyclerView.Adapter<CrimeHolder> {

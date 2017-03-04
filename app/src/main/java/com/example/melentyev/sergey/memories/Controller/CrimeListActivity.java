@@ -1,4 +1,4 @@
-package com.example.melentyev.sergey.memories;
+package com.example.melentyev.sergey.memories.Controller;
 
 import android.support.v4.app.Fragment;
 

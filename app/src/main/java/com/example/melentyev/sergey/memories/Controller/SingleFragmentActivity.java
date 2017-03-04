@@ -1,9 +1,11 @@
-package com.example.melentyev.sergey.memories;
+package com.example.melentyev.sergey.memories.Controller;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.melentyev.sergey.memories.R;
 
 public abstract class SingleFragmentActivity extends AppCompatActivity {
 
